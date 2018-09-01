@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo -n "what's your case name? [case name]: "
+
+read case
+
+$case in 
+
+  [time])
+    sudo apt-get install ntpdate;
+    sudo ntpdate time.windows.com;
+    sudo hwclock --localtime --systohc;   
+   *) echo "Invalid input"
+   exit 1
+   ;;
+   
+esac
+    
+   
+    
+   
+   
+
